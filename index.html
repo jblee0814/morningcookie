@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모닝쿠키 — 매일 아침, 나만의 쿠키 한 입</title>
+  <meta name="description" content="오늘의 날씨·운세·바이오리듬·명언·행운을 한 장의 카드로. 친구가 보낸 모닝쿠키를 받아보세요." />
+  <meta property="og:title" content="🍪 모닝쿠키" />
+  <meta property="og:description" content="매일 아침, 나만의 쿠키 한 입" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: #FFFBF5;
+      color: #2F2A24;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 480px; margin: 0 auto; padding: 48px 24px 64px; }
+    .logo { font-size: 56px; text-align: center; }
+    .brand {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+    .slogan {
+      text-align: center;
+      color: #8A7A66;
+      font-size: 15px;
+      margin-top: 4px;
+    }
+    .hero {
+      background: #FFF3D6;
+      border-radius: 24px;
+      padding: 28px 24px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 21px; font-weight: 800; }
+    .hero p { color: #766B61; font-size: 15px; margin-top: 8px; }
+    .cards { margin-top: 28px; display: grid; gap: 12px; }
+    .card {
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .card span { font-size: 20px; margin-right: 8px; }
+    .c-weather { background: #EAF6F1; }
+    .c-fortune { background: #FFF0E0; }
+    .c-bio { background: #EFF1FF; }
+    .c-quote { background: #FFF7C8; }
+    .c-luck { background: #F2F2EA; }
+    .cta { margin-top: 32px; }
+    .btn {
+      display: block;
+      background: #2F2A24;
+      color: #FFFBF5;
+      text-decoration: none;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 16px;
+    }
+    .ios-note {
+      display: none;
+      text-align: center;
+      color: #8A7A66;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .privacy {
+      text-align: center;
+      color: #8A7A66;
+      font-size: 13px;
+      margin-top: 24px;
+    }
+    footer {
+      text-align: center;
+      color: #B0A595;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">🍪</div>
+    <div class="brand">모닝쿠키</div>
+    <div class="slogan">매일 아침, 나만의 쿠키 한 입</div>
+
+    <div class="hero">
+      <h1>친구가 오늘의 모닝쿠키를 보냈어요</h1>
+      <p>나만의 카드를 받으려면 앱을 설치하세요.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card c-weather"><span>🌤</span>오늘의 날씨와 코디</div>
+      <div class="card c-fortune"><span>🔮</span>오늘의 운세</div>
+      <div class="card c-bio"><span>📈</span>바이오리듬</div>
+      <div class="card c-quote"><span>✏️</span>오늘의 명언 한 줄</div>
+      <div class="card c-luck"><span>🍀</span>행운의 번호·색·방향</div>
+    </div>
+
+    <div class="cta">
+      <a class="btn" id="install"
+         href="https://play.google.com/store/apps/details?id=kr.co.rimitech.morningcookie">
+        모닝쿠키 설치하기 🍪
+      </a>
+      <div class="ios-note" id="iosNote">iOS 버전은 준비 중이에요.</div>
+    </div>
+
+    <div class="privacy">개인 정보는 기기 안에서만 처리됩니다.</div>
+
+    <footer>© 2026 모닝쿠키</footer>
+  </div>
+
+  <script>
+    if (!/android/i.test(navigator.userAgent)) {
+      document.getElementById('iosNote').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
