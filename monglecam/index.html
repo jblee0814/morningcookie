@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- 몽글캠 소개 랜딩 페이지 (설치 안내 + 정책 링크) -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>몽글캠 — 공기계 2대로 만드는 우리집 홈카메라</title>
+  <meta name="description" content="안 쓰는 스마트폰 한 대를 카메라로, 내 폰으로 실시간 영상을. 광고 없는 프라이버시 중심 홈 CCTV 몽글캠." />
+  <meta property="og:title" content="📹 몽글캠" />
+  <meta property="og:description" content="공기계 2대로 만드는 우리집 홈카메라" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: #F4F7FF;
+      color: #1B2233;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 480px; margin: 0 auto; padding: 48px 24px 64px; }
+    .logo { font-size: 56px; text-align: center; }
+    .brand {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+    .slogan {
+      text-align: center;
+      color: #6B7793;
+      font-size: 15px;
+      margin-top: 4px;
+    }
+    .hero {
+      background: #E3ECFF;
+      border-radius: 24px;
+      padding: 28px 24px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 21px; font-weight: 800; }
+    .hero p { color: #4F5B77; font-size: 15px; margin-top: 8px; }
+    .cards { margin-top: 28px; display: grid; gap: 12px; }
+    .card {
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .card span { font-size: 20px; margin-right: 8px; }
+    .c-cam { background: #E7F0FF; }
+    .c-talk { background: #E6F6EF; }
+    .c-alert { background: #FFF0E6; }
+    .c-rec { background: #F0EBFF; }
+    .c-privacy { background: #EAF0F4; }
+    .cta { margin-top: 32px; }
+    .btn {
+      display: block;
+      background: #2B5FE3;
+      color: #FFFFFF;
+      text-decoration: none;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 16px;
+    }
+    .ios-note {
+      display: none;
+      text-align: center;
+      color: #6B7793;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .links {
+      text-align: center;
+      color: #6B7793;
+      font-size: 13px;
+      margin-top: 24px;
+    }
+    .links a { color: #2B5FE3; }
+    footer {
+      text-align: center;
+      color: #9AA4B8;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">📹</div>
+    <div class="brand">몽글캠</div>
+    <div class="slogan">공기계 2대로 만드는 우리집 홈카메라</div>
+
+    <div class="hero">
+      <h1>안 쓰는 폰이 우리집 CCTV가 됩니다</h1>
+      <p>한 대는 카메라로 거치하고, 내 폰으로 실시간 영상을 확인하세요.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card c-cam"><span>📷</span>실시간 영상·음성 (P2P 직접 연결)</div>
+      <div class="card c-talk"><span>🎙</span>양방향 음성 대화</div>
+      <div class="card c-alert"><span>🔔</span>소리 감지 알림</div>
+      <div class="card c-rec"><span>💾</span>기기 내 영상 녹화·스냅샷</div>
+      <div class="card c-privacy"><span>🔒</span>광고 없음 · 영상은 서버에 저장하지 않음</div>
+    </div>
+
+    <div class="cta">
+      <a class="btn" id="install"
+         href="https://play.google.com/store/apps/details?id=com.jb.babycam">
+        몽글캠 설치하기 📹
+      </a>
+      <div class="ios-note" id="iosNote">iOS 버전은 준비 중이에요.</div>
+    </div>
+
+    <div class="links">
+      영상·음성은 기기 간에 직접 전송되며 운영자 서버에 저장되지 않습니다.<br />
+      <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a> · <a href="support.html">고객지원</a>
+    </div>
+
+    <footer>© 2026 몽글캠 (MongleCam)</footer>
+  </div>
+
+  <script>
+    if (!/android/i.test(navigator.userAgent)) {
+      document.getElementById('iosNote').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

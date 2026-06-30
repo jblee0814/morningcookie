@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- 몽글캠 개인정보처리방침 (P2P 영상·Firebase·TURN·녹화 데이터 흐름 반영) -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>몽글캠 개인정보처리방침</title>
+  <meta name="description" content="몽글캠 앱의 개인정보처리방침" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: #F4F7FF;
+      color: #1B2233;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 48px 24px 64px; }
+    .logo { font-size: 40px; text-align: center; }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+    .meta {
+      text-align: center;
+      color: #6B7793;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+    .intro {
+      background: #E3ECFF;
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-top: 28px;
+      font-size: 15px;
+      color: #3C4763;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-top: 32px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #C9DAFF;
+    }
+    p { margin-top: 12px; font-size: 15px; }
+    ul { margin-top: 12px; padding-left: 20px; }
+    li { font-size: 15px; margin-top: 6px; }
+    .table {
+      margin-top: 14px;
+      border: 1px solid #D7E0F2;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .row {
+      display: flex;
+      border-bottom: 1px solid #D7E0F2;
+      font-size: 14px;
+    }
+    .row:last-child { border-bottom: none; }
+    .row .k {
+      flex: 0 0 40%;
+      background: #EAF1FF;
+      padding: 12px 14px;
+      font-weight: 700;
+    }
+    .row .v { flex: 1; padding: 12px 14px; }
+    a { color: #2B5FE3; }
+    footer {
+      text-align: center;
+      color: #9AA4B8;
+      font-size: 12px;
+      margin-top: 44px;
+    }
+    footer a { color: #9AA4B8; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">📹</div>
+    <h1>개인정보처리방침</h1>
+    <div class="meta">몽글캠 · 시행일 2026년 6월 30일</div>
+
+    <div class="intro">
+      몽글캠(이하 "앱")은 공기계 2대를 카메라(송신)와 모니터(뷰어)로
+      연결해 집 안을 살펴보는 홈 카메라 서비스입니다. 앱의 영상과 음성은
+      두 기기 사이에서 직접(P2P) 전송되며, 운영자의 서버에 저장되거나
+      열람되지 않습니다. 앱은 별도의 회원 가입 없이 이용합니다.
+    </div>
+
+    <h2>1. 수집·처리하는 정보 항목</h2>
+    <p>앱은 영상 연결과 알림 제공을 위해 다음 정보를 처리합니다.</p>
+    <ul>
+      <li>영상·음성 데이터: 송신 기기의 카메라 영상과 마이크 음성.
+          뷰어 기기로 실시간 전송되며, 운영자는 이를 저장·열람하지
+          않습니다. 녹화·스냅샷(유료)은 뷰어 기기 내부에만 저장됩니다.</li>
+      <li>기기 식별·인증 정보: 앱이 생성한 익명 기기 키, 인증 토큰,
+          푸시 알림용 토큰(FCM). 이름·전화번호 등 개인 식별 정보와
+          연결되지 않습니다.</li>
+      <li>기기 상태 정보: 이용자가 지정한 기기 이름, 배터리 잔량,
+          온라인 여부, 마지막 응답 시각.</li>
+      <li>연결 시그널링 정보: 두 기기를 연결하기 위한 세션 정보와
+          네트워크 후보 주소(IP 등). 연결이 수립되면 소비되거나
+          만료됩니다.</li>
+      <li>소리 감지 이벤트: 송신 기기가 자체적으로 소리를 감지한
+          시각. 소리(음성) 자체는 전송·저장되지 않습니다.</li>
+      <li>구매 정보: 구독 영수증 및 상태(스토어가 발급).</li>
+    </ul>
+    <p>앱은 연락처, 사진첩, 통화 기록, 위치 등 위 항목 외의 정보를
+       수집하지 않습니다.</p>
+
+    <h2>2. 정보의 이용 목적</h2>
+    <div class="table">
+      <div class="row">
+        <div class="k">영상·음성 데이터</div>
+        <div class="v">송신 기기와 뷰어 기기 간 실시간 영상·음성 제공, 양방향 통화</div>
+      </div>
+      <div class="row">
+        <div class="k">기기 식별·인증 정보</div>
+        <div class="v">두 기기의 페어링·연결 인가, 소리 알림 전달</div>
+      </div>
+      <div class="row">
+        <div class="k">기기 상태 정보</div>
+        <div class="v">카메라 온라인 여부·배터리 표시, 연결 가능 여부 판단</div>
+      </div>
+      <div class="row">
+        <div class="k">연결 시그널링 정보</div>
+        <div class="v">두 기기 간 영상 연결(WebRTC) 수립</div>
+      </div>
+      <div class="row">
+        <div class="k">소리 감지 이벤트</div>
+        <div class="v">소리 발생 시 뷰어 기기로 알림 전송 및 이력 표시</div>
+      </div>
+      <div class="row">
+        <div class="k">구매 정보</div>
+        <div class="v">유료 구독("프리미엄") 상태 확인 및 기능 제공</div>
+      </div>
+    </div>
+
+    <h2>3. 영상·음성의 처리 방식 (중요)</h2>
+    <p>영상과 음성은 송신 기기와 뷰어 기기 사이에서 직접 전송됩니다
+       (WebRTC P2P). 두 기기가 같은 네트워크(예: 집 안 같은 와이파이)에
+       있으면 어떤 서버도 거치지 않습니다.</p>
+    <p>두 기기가 서로 다른 네트워크에 있어(원격 시청) 직접 연결이
+       어려운 경우, 영상이 중계 서버(TURN)를 거쳐 전달될 수 있습니다.
+       이때 영상은 종단 간 암호화(DTLS-SRTP)되어 전송되므로 중계
+       서버도 그 내용을 알 수 없으며, 운영자는 영상·음성을 저장하거나
+       열람하지 않습니다.</p>
+
+    <h2>4. 외부 서비스 및 처리 위탁</h2>
+    <p>앱은 이용자의 개인정보를 제3자에게 판매하지 않습니다. 서비스
+       운영을 위해 아래 외부 서비스를 이용합니다.</p>
+    <ul>
+      <li>Google Firebase — 연결 시그널링 및 기기 상태 저장
+          (Realtime Database), 익명 기기 인증(Authentication),
+          페어링·연결 토큰 발급(Cloud Functions), 소리 감지 푸시
+          알림(Cloud Messaging), 앱 오류 진단(Crashlytics).</li>
+      <li>Cloudflare Realtime(TURN) — 원격 시청 시 암호화된 영상을
+          중계. 세션마다 단기 자격증명이 발급되며, 중계 내용은
+          저장되지 않습니다.</li>
+      <li>Google Play / App Store 결제 — 유료 구독의 결제 및 영수증
+          검증. 카드 번호 등 결제 수단 정보는 앱이 수집하지 않습니다.</li>
+    </ul>
+
+    <h2>5. 보유 기간 및 파기</h2>
+    <ul>
+      <li>연결 시그널링 정보는 연결이 끝나면 정리되며, 오래된
+          데이터는 자동으로 삭제됩니다.</li>
+      <li>기기 키·페어링·기기 상태 정보는 이용자가 페어링을 해제하거나
+          앱을 삭제하면 삭제됩니다.</li>
+      <li>녹화 영상·스냅샷은 뷰어 기기 내부에만 저장되며, 이용자가
+          앱에서 직접 삭제하거나 앱을 삭제하면 함께 제거됩니다.</li>
+    </ul>
+
+    <h2>6. 접근 권한 안내</h2>
+    <ul>
+      <li>카메라(송신 시 필수): 영상 촬영 및 전송에 사용합니다.</li>
+      <li>마이크(송신/음성 시 필수): 음성 전송과 소리 감지에
+          사용합니다. 소리 감지는 기기 안에서만 처리됩니다.</li>
+      <li>알림(선택): 소리 감지 알림 표시에 사용합니다.</li>
+      <li>다른 앱 위에 표시(선택): 원격에서 카메라를 깨울 때 촬영
+          서비스를 안정적으로 시작하기 위해 사용합니다. 거부해도
+          앱은 동작합니다.</li>
+      <li>배터리 최적화 제외(선택): 장시간 촬영이 중간에 멈추지
+          않도록 하는 데 사용합니다.</li>
+    </ul>
+    <p>각 권한은 기기의 설정 화면에서 언제든지 변경할 수 있으며,
+       선택 권한을 거부해도 핵심 기능은 이용할 수 있습니다.</p>
+
+    <h2>7. 아동의 개인정보</h2>
+    <p>앱은 가정 내 영유아 모니터링 등에 사용될 수 있으나, 보호자의
+       기기에서 운영되며 아동으로부터 직접 개인정보를 수집하지
+       않습니다. 촬영 대상에 대한 관리 책임은 기기를 설치·운영하는
+       이용자에게 있습니다.</p>
+
+    <h2>8. 이용자의 권리</h2>
+    <p>이용자는 앱 내에서 페어링을 해제하거나, 저장된 녹화를
+       삭제하거나, 권한을 변경할 수 있으며, 앱을 삭제하여 모든 정보의
+       처리를 중단할 수 있습니다.</p>
+
+    <h2>9. 개인정보 보호책임자 및 문의</h2>
+    <p>개인정보 처리에 관한 문의는 아래로 연락해 주시기 바랍니다.</p>
+    <ul>
+      <li>이메일: <a href="mailto:hicracks@gmail.com">hicracks@gmail.com</a></li>
+    </ul>
+
+    <h2>10. 처리방침의 변경</h2>
+    <p>본 개인정보처리방침은 법령이나 서비스 변경에 따라 수정될 수
+       있으며, 변경 시 본 페이지를 통해 공지합니다.</p>
+
+    <footer>
+      © 2026 몽글캠 · <a href="index.html">홈으로</a> · <a href="terms.html">이용약관</a>
+    </footer>
+  </div>
+</body>
+</html>
