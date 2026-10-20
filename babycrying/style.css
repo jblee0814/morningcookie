@@ -1,0 +1,29 @@
+/* 아기 울음 알리미 정책·안내 페이지 공통 스타일 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Hiragino Sans", sans-serif;
+  background: #F6F4FB;
+  color: #1F1D2B;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 640px; margin: 0 auto; padding: 48px 20px 64px; }
+.logo { font-size: 40px; text-align: center; }
+h1 { text-align: center; font-size: 24px; font-weight: 800; margin-top: 8px; }
+.meta { text-align: center; color: #6E6A82; font-size: 14px; margin-top: 6px; }
+.intro { background: #ECE8F7; border-radius: 16px; padding: 18px 20px; margin-top: 28px; font-size: 15px; color: #3E3A56; }
+h2 { font-size: 18px; font-weight: 800; margin-top: 32px; padding-bottom: 6px; border-bottom: 2px solid #D9D2F0; }
+p { margin-top: 12px; font-size: 15px; }
+ul { margin-top: 12px; padding-left: 20px; }
+li { font-size: 15px; margin-top: 6px; }
+.table { margin-top: 14px; border: 1px solid #DDD8EC; border-radius: 12px; overflow: hidden; }
+.row { display: flex; border-bottom: 1px solid #DDD8EC; font-size: 14px; }
+.row:last-child { border-bottom: none; }
+.row .k { flex: 0 0 38%; background: #F0EDF9; padding: 12px 14px; font-weight: 700; }
+.row .v { flex: 1; padding: 12px 14px; }
+.card { display: block; background: #fff; border-radius: 14px; padding: 16px 18px; margin-top: 12px; text-decoration: none; color: inherit; border: 1px solid #E6E1F3; }
+.card b { display: block; font-size: 16px; }
+.card span { font-size: 14px; color: #6E6A82; }
+a { color: #5F55A0; }
+footer { text-align: center; color: #9C98AE; font-size: 12px; margin-top: 44px; }
+footer a { color: #9C98AE; }

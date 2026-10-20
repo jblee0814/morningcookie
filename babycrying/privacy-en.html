@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- 아기 울음 알리미 개인정보처리방침 영문판 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby Cry Monitor Privacy Policy</title>
+  <meta name="description" content="Privacy Policy of the Baby Cry Monitor app" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">👶</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Baby Cry Monitor · Effective October 20, 2026</div>
+
+    <div class="intro">
+      Baby Cry Monitor ("the app") alerts a connected parent phone when the phone
+      placed near your baby (the baby phone) detects a loud sound. No sign-up is
+      needed, and the app never asks for your name, phone number or email.
+    </div>
+
+    <h2>1. Information we process</h2>
+    <ul>
+      <li><b>Detected sound (10 seconds)</b>: when "Send detected sound" is on
+          (on by default), about 10 seconds of audio right before a detection is
+          compressed and uploaded. Only the connected parent phone can play it, and it is
+          <b>deleted automatically after 24 hours</b>. Turn the setting off and no
+          audio is uploaded.</li>
+      <li><b>Loudness check</b>: all other microphone input is measured for
+          loudness on the baby phone and discarded at once. It is never recorded to
+          a file or sent to a server.</li>
+      <li><b>Detection log</b>: the type and time of detections and of monitoring
+          start/stop.</li>
+      <li><b>Connection data</b>: the baby name (or nickname) you enter, the device
+          model of both phones, an anonymous ID created by the app, push
+          notification tokens, the parent phone's language setting, and a one-time
+          6-digit connection code.</li>
+      <li><b>Baby phone status</b>: monitoring on/off, battery level and charging,
+          microphone availability, last seen time.</li>
+      <li><b>Security log</b>: to stop brute-force guessing of connection codes,
+          connection attempts are counted per anonymous ID and IP address for 10
+          minutes.</li>
+      <li><b>Crash data</b>: device model, OS/app version and error details when
+          the app crashes (Firebase Crashlytics).</li>
+      <li><b>Purchase data</b>: whether Premium was purchased (store receipt). The
+          app never receives card or payment details.</li>
+    </ul>
+    <p>The baby photo and the parent phone number for "Call" (Android) stay on the
+       baby phone and are never uploaded. The app does not collect contacts,
+       photos, location or advertising IDs, and shows no ads.</p>
+
+    <h2>2. Why we use it</h2>
+    <div class="table">
+      <div class="row"><div class="k">Detected sound</div><div class="v">Lets parents hear what happened and decide</div></div>
+      <div class="row"><div class="k">Detection log</div><div class="v">Parent phone alerts and recent detections</div></div>
+      <div class="row"><div class="k">Connection data</div><div class="v">Connecting the two phones, delivering alerts, showing the baby name and device</div></div>
+      <div class="row"><div class="k">Baby phone status</div><div class="v">Showing monitoring and battery, warning when the connection or mic is lost</div></div>
+      <div class="row"><div class="k">Security log</div><div class="v">Preventing code guessing</div></div>
+      <div class="row"><div class="k">Crash data</div><div class="v">Finding and fixing bugs</div></div>
+      <div class="row"><div class="k">Purchase data</div><div class="v">Providing Premium</div></div>
+    </div>
+
+    <h2>3. Service providers</h2>
+    <p>We never sell your data or use it for advertising. We use:</p>
+    <ul>
+      <li>Google Firebase — anonymous authentication, storage of connection data,
+          detection logs and detected sound (Realtime Database), connection
+          handling (Cloud Functions), push notifications (Cloud Messaging; via Apple
+          Push Notification service on iOS) and crash reports (Crashlytics). Data may
+          be stored on Google servers outside your country (e.g. the US).</li>
+      <li>Google Play / App Store — Premium payment and purchase verification.</li>
+    </ul>
+
+    <h2>4. Retention</h2>
+    <ul>
+      <li>Detected sound: deleted after 24 hours.</li>
+      <li>Detection log: deleted after 7 days.</li>
+      <li>Connection code: deleted when used or expired.</li>
+      <li>Security log (attempt count, IP address): deleted after 10 minutes (cleanup runs hourly).</li>
+      <li>Parent phone data: deleted when you disconnect or switch to another parent phone.</li>
+      <li>Baby name, device model and baby phone status: kept while the connection
+          exists. Email us to have them deleted.</li>
+    </ul>
+
+    <h2>5. Permissions</h2>
+    <ul>
+      <li>Microphone (baby phone, required): loudness detection and the 10-second sound.</li>
+      <li>Notifications (optional, effectively required on the parent phone): alerts.</li>
+      <li>Camera (optional): scanning the connection QR code.</li>
+      <li>Phone (Android, optional): only when the alert method is "Call".</li>
+      <li>Photos (optional): only when choosing a baby photo. The photo never leaves the device.</li>
+    </ul>
+    <p>You can change permissions at any time in your device settings.</p>
+
+    <h2>6. Children</h2>
+    <p>The app is used by parents on their own devices and collects nothing directly
+       from children. You may enter a nickname instead of the baby's name. Detected
+       sound may include sounds around the baby; turn off "Send detected sound" if
+       you prefer.</p>
+
+    <h2>7. Your rights</h2>
+    <p>You can turn off sound sending, disconnect, change permissions or delete the
+       app at any time. Email us to access or delete data kept on the server, and we
+       will handle it without delay.</p>
+
+    <h2>8. Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:hicracks@gmail.com">hicracks@gmail.com</a></li>
+    </ul>
+
+    <h2>9. Changes</h2>
+    <p>This policy may change with the law or the service. Changes will be posted on
+       this page.</p>
+
+    <footer>
+      © 2026 Baby Cry Monitor · <a href="index.html">Home</a> · <a href="terms-en.html">Terms</a> · <a href="privacy.html">한국어</a>
+    </footer>
+  </div>
+</body>
+</html>
