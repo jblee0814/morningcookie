@@ -12,7 +12,7 @@
   <div class="wrap">
     <div class="logo">👶</div>
     <h1>개인정보처리방침</h1>
-    <div class="meta">아기 울음 알리미 · 시행일 2026년 10월 20일</div>
+    <div class="meta">아기 울음 알리미 · 시행일 2026년 10월 21일</div>
 
     <div class="intro">
       아기 울음 알리미(App Store 이름 "아기 울음 알리미 플러스", 이하 "앱")는
@@ -39,11 +39,13 @@
           연결 시도 횟수를 익명 식별자와 접속 IP 주소 기준으로 10분 동안 셉니다.</li>
       <li><b>오류 정보</b>: 앱이 비정상 종료될 때 기기 모델, OS·앱 버전, 오류
           내용(Firebase Crashlytics).</li>
+      <li><b>사용 통계</b>: 감시를 시작할 때 고른 알림 방법(보호자 폰 알림·진동·소리), 화면 조회와 앱 사용 횟수, 앱이 만든 분석용 익명 식별자,
+          접속 IP로 추정한 대략적인 지역(도시 수준, IP 주소는 저장하지 않음),
+          프리미엄 구매 이벤트(상품·가격)(Firebase Analytics).</li>
       <li><b>구매 정보</b>: 프리미엄 구매 여부(스토어가 발급한 구매 기록).
           카드 번호 등 결제 수단 정보는 앱이 받지 않습니다.</li>
     </ul>
-    <p>아기 사진과 "전화 걸기"용 보호자 전화번호(Android)는 아기 폰 안에만
-       저장하며 서버로 보내지 않습니다. 앱은 연락처, 사진첩, 위치, 광고
+    <p>아기 사진은 아기 폰 안에만 저장하며 서버로 보내지 않습니다. 앱은 연락처, 사진첩, 정확한 위치, 광고
        식별자를 수집하지 않고 광고를 넣지 않습니다.</p>
 
     <h2>2. 이용 목적</h2>
@@ -54,6 +56,7 @@
       <div class="row"><div class="k">아기 폰 상태</div><div class="v">감시 상태·배터리 표시, 연결 끊김·마이크 사용 불가 경고</div></div>
       <div class="row"><div class="k">보안 기록</div><div class="v">연결 코드 무작위 대입 방지</div></div>
       <div class="row"><div class="k">오류 정보</div><div class="v">오류 원인 파악과 수정</div></div>
+      <div class="row"><div class="k">사용 통계</div><div class="v">어떤 알림 방법을 많이 쓰는지 등 기능 개선 판단(광고·개인 맞춤에 쓰지 않음)</div></div>
       <div class="row"><div class="k">구매 정보</div><div class="v">프리미엄 기능 제공</div></div>
     </div>
 
@@ -64,7 +67,7 @@
       <li>Google Firebase — 익명 인증(Authentication), 연결 정보·감지 기록·감지된
           소리 저장(Realtime Database), 연결 처리(Cloud Functions), 푸시 알림
           (Cloud Messaging, iOS는 Apple 푸시 알림 서비스 경유), 오류 진단
-          (Crashlytics). 데이터는 Google의 해외 서버(미국 등)에 저장될 수 있습니다.</li>
+          (Crashlytics), 사용 통계(Analytics). 데이터는 Google의 해외 서버(미국 등)에 저장될 수 있습니다.</li>
       <li>Google Play / App Store — 프리미엄 결제와 구매 확인.</li>
     </ul>
 
@@ -72,6 +75,7 @@
     <ul>
       <li>감지된 소리: 24시간 뒤 자동 삭제.</li>
       <li>감지 기록: 7일 뒤 자동 삭제.</li>
+      <li>사용 통계: 2개월 뒤 자동 삭제(Google Analytics 보관 기간 설정).</li>
       <li>연결 코드: 만료되거나 사용하면 바로 삭제.</li>
       <li>보안 기록(연결 시도 횟수·IP 주소): 10분이 지나면 삭제(정리 작업은 1시간마다).</li>
       <li>보호자 폰 정보: 연결을 해제하거나 다른 보호자 폰으로 바꾸면 삭제.</li>
@@ -85,7 +89,6 @@
       <li>마이크(아기 폰, 필수): 소리 크기 감지와 감지된 소리 10초 전송.</li>
       <li>알림(선택, 보호자 폰은 사실상 필수): 감지 알림 표시.</li>
       <li>카메라(선택): 연결 QR 코드 읽기.</li>
-      <li>전화(Android 선택): 알림 방법을 "전화 걸기"로 정했을 때만.</li>
       <li>사진(선택): 아기 사진을 고를 때만. 사진은 기기 밖으로 나가지 않습니다.</li>
     </ul>
     <p>권한은 기기 설정에서 언제든 바꿀 수 있습니다.</p>

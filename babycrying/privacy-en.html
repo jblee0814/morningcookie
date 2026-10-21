@@ -12,7 +12,7 @@
   <div class="wrap">
     <div class="logo">👶</div>
     <h1>Privacy Policy</h1>
-    <div class="meta">Baby Cry Monitor · Effective October 20, 2026</div>
+    <div class="meta">Baby Cry Monitor · Effective October 21, 2026</div>
 
     <div class="intro">
       Baby Cry Monitor ("the app") alerts a connected parent phone when the phone
@@ -43,12 +43,17 @@
           minutes.</li>
       <li><b>Crash data</b>: device model, OS/app version and error details when
           the app crashes (Firebase Crashlytics).</li>
+      <li><b>Usage statistics</b>: the alert method chosen when monitoring starts
+          (parent phone alert, vibration or sound), screen views and app
+          sessions, an anonymous analytics ID created by the app, approximate
+          region derived from the IP address (city level; the IP address itself is
+          not stored), and Premium purchase events (product and price) (Firebase
+          Analytics).</li>
       <li><b>Purchase data</b>: whether Premium was purchased (store receipt). The
           app never receives card or payment details.</li>
     </ul>
-    <p>The baby photo and the parent phone number for "Call" (Android) stay on the
-       baby phone and are never uploaded. The app does not collect contacts,
-       photos, location or advertising IDs, and shows no ads.</p>
+    <p>The baby photo stays on the baby phone and is never uploaded. The app does not collect contacts,
+       photos, precise location or advertising IDs, and shows no ads.</p>
 
     <h2>2. Why we use it</h2>
     <div class="table">
@@ -58,6 +63,7 @@
       <div class="row"><div class="k">Baby phone status</div><div class="v">Showing monitoring and battery, warning when the connection or mic is lost</div></div>
       <div class="row"><div class="k">Security log</div><div class="v">Preventing code guessing</div></div>
       <div class="row"><div class="k">Crash data</div><div class="v">Finding and fixing bugs</div></div>
+      <div class="row"><div class="k">Usage statistics</div><div class="v">Deciding which features to improve, such as which alert methods are used (never for ads or personalization)</div></div>
       <div class="row"><div class="k">Purchase data</div><div class="v">Providing Premium</div></div>
     </div>
 
@@ -67,7 +73,7 @@
       <li>Google Firebase — anonymous authentication, storage of connection data,
           detection logs and detected sound (Realtime Database), connection
           handling (Cloud Functions), push notifications (Cloud Messaging; via Apple
-          Push Notification service on iOS) and crash reports (Crashlytics). Data may
+          Push Notification service on iOS), crash reports (Crashlytics) and usage statistics (Analytics). Data may
           be stored on Google servers outside your country (e.g. the US).</li>
       <li>Google Play / App Store — Premium payment and purchase verification.</li>
     </ul>
@@ -76,6 +82,7 @@
     <ul>
       <li>Detected sound: deleted after 24 hours.</li>
       <li>Detection log: deleted after 7 days.</li>
+      <li>Usage statistics: deleted after 2 months (Google Analytics retention setting).</li>
       <li>Connection code: deleted when used or expired.</li>
       <li>Security log (attempt count, IP address): deleted after 10 minutes (cleanup runs hourly).</li>
       <li>Parent phone data: deleted when you disconnect or switch to another parent phone.</li>
@@ -90,7 +97,6 @@
       <li>Microphone (baby phone, required): loudness detection and the 10-second sound.</li>
       <li>Notifications (optional, effectively required on the parent phone): alerts.</li>
       <li>Camera (optional): scanning the connection QR code.</li>
-      <li>Phone (Android, optional): only when the alert method is "Call".</li>
       <li>Photos (optional): only when choosing a baby photo. The photo never leaves the device.</li>
     </ul>
     <p>You can change permissions at any time in your device settings.</p>
