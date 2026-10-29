@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 몽글캠 설치 링크 — 폰 종류(Android·iPhone)를 보고 맞는 스토어로 보낸다. 앱 안 공유·QR이 이 주소를 쓴다(?c=캠페인) -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>MongleCam</title>
+  <meta property="og:title" content="MongleCam" />
+  <meta property="og:description" content="Turn a spare phone into a home camera." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Hiragino Sans", sans-serif;
+      background: #F4F7FF; color: #1B2233; line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 420px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+    .logo { font-size: 56px; }
+    .brand { font-size: 26px; font-weight: 800; margin-top: 8px; }
+    .msg { color: #4F5B77; font-size: 15px; margin-top: 8px; }
+    .btns { margin-top: 32px; display: grid; gap: 12px; }
+    .btn {
+      display: block; background: #2B5FE3; color: #FFFFFF; text-decoration: none;
+      font-size: 17px; font-weight: 700; padding: 16px; border-radius: 16px;
+    }
+    .btn.alt { background: #FFFFFF; color: #2B5FE3; border: 1.5px solid #2B5FE3; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">📹</div>
+    <div class="brand">MongleCam</div>
+    <p class="msg" id="msg">Choose your phone's app store.</p>
+    <div class="btns">
+      <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.jb.babycam">Android · Google Play</a>
+      <a class="btn alt" id="ios" href="https://apps.apple.com/app/apple-store/id6786597227?pt=129018400&amp;ct=app_web&amp;mt=8">iPhone · App Store</a>
+    </div>
+  </div>
+  <script>
+    (function () {
+      // 캠페인은 영문 소문자·숫자·밑줄만 받는다(다른 값은 web으로 묶는다).
+      var m = /[?&]c=([a-z0-9_]{1,24})(?:&|$)/.exec(location.search);
+      var c = m ? m[1] : "web";
+      var play = "https://play.google.com/store/apps/details?id=com.jb.babycam&referrer=" +
+        encodeURIComponent("utm_source=app_share&utm_medium=share&utm_campaign=" + c);
+      var ios = "https://apps.apple.com/app/apple-store/id6786597227?pt=129018400&ct=app_" + c + "&mt=8";
+      document.getElementById("play").href = play;
+      document.getElementById("ios").href = ios;
+
+      var lang = (navigator.language || "en").toLowerCase();
+      var text = {
+        ko: "휴대폰에 맞는 스토어를 골라 주세요.",
+        ja: "スマホに合ったストアを選んでください。",
+        es: "Elige la tienda de apps de tu teléfono.",
+        pt: "Escolha a loja de apps do seu celular.",
+        de: "Wählen Sie den App-Store Ihres Handys."
+      }[lang.slice(0, 2)];
+      if (text) document.getElementById("msg").textContent = text;
+
+      // 판별되는 폰은 바로 스토어로 보낸다. 실패해도 위 버튼이 남는다.
+      var ua = navigator.userAgent || "";
+      var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      if (/Android/i.test(ua)) location.replace(play);
+      else if (isIOS) location.replace(ios);
+    })();
+  </script>
+</body>
+</html>
